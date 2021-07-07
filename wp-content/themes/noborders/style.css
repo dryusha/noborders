@@ -1,3 +1,2 @@
-#footer {
-    display: none;
-}
+@import url(style/fonts.css);
+@import url(style/global.css);

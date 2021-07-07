@@ -1,0 +1,78 @@
+@import "header.css";
+
+body {
+    margin: 0;
+    font-family: EuclidCircularA;
+    font-size: 32px;
+    color: #343635;
+}
+
+.wrapper-content {
+    background: #F1D45B;
+    position: relative;
+}
+
+
+
+.wrapper-content .background-x {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 865px;
+    content:"";
+    background: url("/noborders/wp-content/themes/noborders/images/vector-x-border.svg") no-repeat;
+    background-size: contain;
+    background-position: right;
+    right: 0;
+    top: 56px;
+}
+
+.wrapper-content .background-x .vector-x {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    content:"";
+    background: url("/noborders/wp-content/themes/noborders/images/vector-x.svg") no-repeat;
+    background-size: contain;
+    background-position: right;
+    right: 0;
+    top: 76px;
+}
+
+.wrapper-content .container {
+    position: relative;
+    z-index: 10;
+    padding: 0 0 0 256px;
+}
+
+.wrapper-content .container h1 {
+    font-size: 94px;
+    max-width: 1039px;
+    font-weight: bolder;
+    line-height: 110px;
+    margin-bottom: 28px;
+}
+
+.wrapper-content .container h2 {
+    font-size: 68px;
+    font-weight: bolder;
+    margin-top: 208px;
+}
+
+.wrapper-content .container p {
+    padding-right: 140px;
+    margin: 0;
+}
+
+.wrapper-content .container .packages {
+    background: #94D6F1;
+    width: 100%;
+    padding: 80px 0 20px 117px;
+    position: relative;
+    left: -117px;
+    margin-top: 200px;
+}
+
+.dark {
+    background: #343635;
+}

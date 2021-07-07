@@ -10,52 +10,55 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-    <header>
-        <?php
-            if(has_custom_logo()) {
-        ?>
-            <div><?php
+<?php
+    global $wp_query;
+    $category = get_the_category($wp_query->get_queried_object_id());
+?>
 
-                $logo = get_theme_mod( 'custom_logo' );
-                $image = wp_get_attachment_image_src( $logo , 'full' );
-                $image_url = $image[0];
-                $image_width = $image[1];
-                $image_height = $image[2];
-                ?>
+    <div class="wrapper-content <?php echo $category[0]->name?>">
 
-                <img src="<?php echo $image_url;?>" alt="">
-            </div>
-        <?php
-            }
-        ?>
+        <header>
+            <div class="logo"></div>
 
+            <?php
+                if ( has_nav_menu( 'expanded' ) ) {
+            ?>
+                <div class="menu toggle-wrapper nav-toggle-wrapper has-expanded-menu">
+                    <button class="js_menu_btn"> Meet your digital team</button>
 
-        <?php
-		    if ( has_nav_menu( 'expanded' ) ) {
-		?>
-            <div class="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
+                    <div class="js_menu_toggle nav-toggle" style="display: none;">
+                        <span class="toggle-inner">
 
-                <button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-                    <span class="toggle-inner">
-                        <span class="toggle-text"><?php _e( 'Menu', 'noborders' ); ?></span>
-                        <span class="toggle-icon">
-                            <?php
-                                /*twentytwenty_the_theme_svg( 'ellipsis' );*/
-                                wp_nav_menu(
-                                    array(
-                                        'container'  => '',
-                                        'items_wrap' => '%3$s',
-                                        'theme_location' => 'expanded',
-                                    )
-                                );
-                            ?>
+                            <span class="js_menu_btn toggle-header">X</span>
+                            <span class="toggle-text"><?php _e( 'Menu', 'noborders' ); ?></span>
+                            <span class="toggle-icon">
+                                <?php
+                                    wp_nav_menu(
+                                        array(
+                                            'container'  => '',
+                                            'items_wrap' => '%3$s',
+                                            'theme_location' => 'expanded',
+                                        )
+                                    );
 
+                                    echo do_shortcode('[wpforms id="113" title="false"]');
+                                ?>
+
+                            </span>
                         </span>
-                    </span>
-                </button><!-- .nav-toggle -->
+                    </div><!-- .nav-toggle -->
 
-            </div><!-- .nav-toggle-wrapper -->
-        <?php
-            }
-        ?>
-    </header>
+                </div><!-- .nav-toggle-wrapper -->
+            <?php
+                }
+            ?>
+
+            <div class="get-in-touch">
+                <span>Get in touch</span>
+            </div>
+
+        </header>
+        <div class="background-x">
+            <div class="vector-x"></div>
+        </div>
+        <div class="container">

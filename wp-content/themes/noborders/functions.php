@@ -46,11 +46,11 @@ function noborders_theme_setup() {
 function noborders_theme_menus() {
 
     $locations = array(
-        'primary'  => __( 'Desktop Horizontal Menu', 'twentytwenty' ),
-        'expanded' => __( 'Desktop Expanded Menu', 'twentytwenty' ),
-        'mobile'   => __( 'Mobile Menu', 'twentytwenty' ),
-        'footer'   => __( 'Footer Menu', 'twentytwenty' ),
-        'social'   => __( 'Social Menu', 'twentytwenty' ),
+        'primary'  => __( 'Desktop Horizontal Menu', 'noborders' ),
+        'expanded' => __( 'Desktop Expanded Menu', 'noborders' ),
+        'mobile'   => __( 'Mobile Menu', 'noborders' ),
+        'footer'   => __( 'Footer Menu', 'noborders' ),
+        'social'   => __( 'Social Menu', 'noborders' ),
     );
 
     register_nav_menus( $locations );
@@ -75,7 +75,7 @@ function careerPosts() {
 }
 
 function portfolioPosts($atts) {
-    $args = array( 'posts_per_page' => $atts["limit"], 'category_name' => 'portfolio');
+    $args = array( 'posts_per_page' => $atts["limit"], 'category_name' => 'cases');
     $careers_posts = new WP_Query($args);
     $content = '';
 
@@ -91,3 +91,13 @@ function portfolioPosts($atts) {
 }
 
 add_action( 'after_setup_theme', 'noborders_theme_setup' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function noborders_scripts() {
+    wp_enqueue_style( 'noborders-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+
+    wp_enqueue_script('noborders-functions', get_stylesheet_directory_uri().'/js/functions.js');
+}
+add_action( 'wp_enqueue_scripts', 'noborders_scripts' );
