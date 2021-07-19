@@ -23,16 +23,21 @@
             <?php
                 if ( has_nav_menu( 'expanded' ) ) {
             ?>
-                <div class="menu toggle-wrapper nav-toggle-wrapper has-expanded-menu">
-                    <button class="js_menu_btn"> Meet your digital team</button>
+                <div class="menu toggle-wrapper has-expanded-menu">
+                    <button class="js_menu_btn">Meet your digital team</button>
 
-                    <div class="js_menu_toggle nav-toggle" style="display: none;">
-                        <span class="toggle-inner">
+                    <div id="nav-toggle" class="js_menu_toggle fade out">
+                        <div class="nav-toggle-wrapper">
+                            <span class="toggle-inner">
+                                <div class="toggle-header">
+                                    <div class="title">
+                                        <span>Meet your digital team</span>
+                                    </div>
+                                    <div class="js_menu_btn close">Close</div>
+                                </div>
 
-                            <span class="js_menu_btn toggle-header">X</span>
-                            <span class="toggle-text"><?php _e( 'Menu', 'noborders' ); ?></span>
-                            <span class="toggle-icon">
-                                <?php
+                                <div class="toggle-icon">
+                                    <?php
                                     wp_nav_menu(
                                         array(
                                             'container'  => '',
@@ -42,10 +47,12 @@
                                     );
 
                                     echo do_shortcode('[wpforms id="113" title="false"]');
-                                ?>
+                                    ?>
 
+                                </div>
                             </span>
-                        </span>
+                        </div><!-- .nav-toggle-wrapper -->
+
                     </div><!-- .nav-toggle -->
 
                 </div><!-- .nav-toggle-wrapper -->

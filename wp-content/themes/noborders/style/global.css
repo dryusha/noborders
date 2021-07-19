@@ -1,6 +1,7 @@
 @import "header.css";
 
 body {
+    position: relative;
     margin: 0;
     font-family: EuclidCircularA;
     font-size: 32px;
