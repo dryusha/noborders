@@ -52,6 +52,7 @@
     display: flex;
     justify-content: flex-end;
     font-size: 20px;
+    margin-bottom: 130px;
 }
 
 #nav-toggle .nav-toggle-wrapper .toggle-header .title {
@@ -70,6 +71,30 @@
 
 #nav-toggle .nav-toggle-wrapper .toggle-header .close:hover {
     cursor: pointer;
+}
+
+#nav-toggle .nav-toggle-wrapper .toggle-icon {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#nav-toggle .nav-toggle-wrapper .toggle-icon li {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+#nav-toggle .nav-toggle-wrapper .toggle-icon li a {
+    color: #FFF;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #FFF;
+}
+
+#nav-toggle .nav-toggle-wrapper .toggle-icon li a:hover {
+    color: #94D6F1;
+    border-bottom: 1px solid #94D6F1;
 }
 
 #nav-toggle.fade.out {
