@@ -38,6 +38,7 @@ function noborders_theme_setup() {
 
     add_shortcode('portfolioPosts', 'portfolioPosts' );
     add_shortcode('careerPosts', 'careerPosts' );
+    add_shortcode('mainPageCases', 'mainPageCases' );
 }
 
 /**
@@ -61,31 +62,154 @@ add_action( 'init', 'noborders_theme_menus' );
 function careerPosts() {
     $args = array( 'posts_per_page' => 10, 'category_name' => 'careers');
     $careers_posts = new WP_Query($args);
-    $content = "<h3>Open positions</h3>";
+    $content = "<div class='career-posts'>";
+    $content .= "<h3>Open positions</h3>";
+
+    $content .= "<div class='items'>";
 
     while($careers_posts->have_posts()) :
         $careers_posts->the_post();
 
-        $content .= "<div>".get_the_title()."</div>";
-        $content .= "<div><a href='".get_permalink()."'>Read More</a></div>";
+        $content .= "<div class='item'>".get_the_title()."
+            <a href='".get_permalink()."'>Read More</a>
+        </div>";
 
     endwhile;
+
+    $content .= "</div>";
+    $content .= "</div>";
 
     return $content;
 }
 
 function portfolioPosts($atts) {
-    $args = array( 'posts_per_page' => $atts["limit"], 'category_name' => 'cases');
-    $careers_posts = new WP_Query($args);
     $content = '';
 
-    while($careers_posts->have_posts()) :
-        $careers_posts->the_post();
+    if ($atts["page"] == "current") {
+        global $post;
+        $post_id = $post->ID; // current post ID
+        $cat = get_the_category();
+        $current_cat_id = $cat[0]->cat_ID; // current category ID
 
-        $content .= "<div><a href='".get_permalink()."'>".get_the_post_thumbnail()."</a></div>";
-        $content .= "<div>".get_the_title()."</div>";
+        $args = array(
+            'category' => $current_cat_id,
+            'orderby'  => 'post_date',
+            'order'    => 'ASC'
+        );
+        $posts = get_posts( $args );
+// get IDs of posts retrieved from get_posts
+        $ids = array();
+        foreach ( $posts as $thepost ) {
+            $ids[] = $thepost->ID;
+        }
+        $thisindex = array_search( $post_id, $ids );
 
-    endwhile;
+        $nextIds = array();
+        $flag = 0;
+        for ($i = 1; $i < 3; $i++) {
+            $nextId = isset($ids[ $thisindex + $i ]) ? $ids[ $thisindex + $i ] : false;
+
+            if ($nextId == false) {
+                $nextId = isset($ids[ $flag ]) ? $ids[ $flag ] : false;
+                $flag++;
+            }
+
+            array_push($nextIds, $nextId);
+        }
+
+        $content .= "<div class='noborders-content cases-block'>";
+        $content .= "<h3>Other projects</h3>";
+        $content .= "<a class=\"discover show-all\" href=\"/cases\"><span>Show all cases</span> <i class=\"icon-arrow\"></i></a>";
+
+        $content .= "<div class='items'>";
+
+        for ($i = 0; $i < count($nextIds); $i++) {
+            $post_id = $nextIds[$i];
+            $postType = get_post_meta($post_id, 'type', true);
+
+            $content .= "<div class='item'>
+                <a href='".get_permalink($post_id)."'>
+                    <img src='".wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full')[0]."' />
+                </a>
+                <div class='title'>
+                    ".get_the_title($post_id)."
+                    <span>".$postType."</span>
+                </div>
+            </div>";
+        }
+
+
+
+        $content .= "</div>";
+        $content .= "</div>";
+
+
+
+    } else if ($atts["page"] === "home") {
+        $atts_ids = json_decode(str_replace("'", '"', $atts['ids']));
+
+        foreach ($atts_ids as $key=>$value) {
+            $atts_ids->{$key} = (object) [
+                "link" => get_permalink( $value ),
+                "img" => wp_get_attachment_image_src(get_post_thumbnail_id($value), 'full')[0]
+            ];
+        }
+
+        $content .= "<div class='items'>";
+
+        for ($i = 0; $i < 7; $i++) {
+
+            if ($i == 0 || $i == 2 || $i == 5) {
+                $content .= "<div class='block'>";
+            }
+
+            if (!empty($atts_ids->{$i})) {
+                $content .= "<div class='item'><a href=\"".$atts_ids->{$i}->link."\" style=\"
+                        background: url( ".$atts_ids->{$i}->img.");
+                        background-position: center;
+                        background-size: cover;
+                    \"></a></div>";
+            } else if ($i == 4) {
+                $content .= "<div class='item'><a class='discover' href='cases'><span>Discover more</span> <i class='icon-arrow'></i></a></div>";
+            } else {
+                $content .= "<div class='item'></div>";
+            }
+
+
+            if ($i == 1 || $i == 4 || $i == 6) {
+                $content .= "</div>";
+            }
+
+        }
+
+        $content .= "</div>";
+    } else {
+        $args = array( 'posts_per_page' => $atts["limit"], 'category_name' => 'cases');
+        $careers_posts = new WP_Query($args);
+
+        $content .= "<div class='noborders-content cases'>";
+        $content .= "<div class='items'>";
+
+        while($careers_posts->have_posts()) :
+            $careers_posts->the_post();
+            $postType = get_post_meta(get_the_ID(), 'type', true);
+
+            $content .= "<div class='item'>
+                <a href='".get_permalink()."'>
+                    <img src='".wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]."' />
+                </a>
+                <div class='title'>
+                    ".get_the_title()."
+                    <span>".$postType."</span>
+                </div>
+            </div>";
+
+
+        endwhile;
+
+        $content .= "</div>";
+        $content .= "</div>";
+    }
 
     return $content;
 }

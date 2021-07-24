@@ -1,0 +1,68 @@
+.wrapper-content .cases {
+}
+
+.wrapper-content .cases .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wrapper-content .cases .items .item {
+    width: 49%;
+    margin-top: 24px;
+}
+
+.wrapper-content .cases .items .item:nth-child(3n) {
+    margin: 0;
+    width: 100%;
+}
+
+/*.wrapper-content .cases .items .item:nth-child(3n) a {*/
+    /*width: 100%;*/
+    /*display: block;*/
+/*}*/
+
+.wrapper-content .cases .items .item a img {
+    width: 100%;
+}
+
+.wrapper-content .cases-block .items .item .title,
+.wrapper-content .cases .items .item .title {
+    display: block;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.wrapper-content .cases-block .items .item .title span,
+.wrapper-content .cases .items .item .title span{
+    display: block;
+    font-size: 20px;
+}
+
+
+.wrapper-content .cases-block h3 {
+    margin-top: 0;
+}
+
+.wrapper-content .cases-block .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wrapper-content .cases-block .items .item {
+    width: 49%;
+}
+
+
+
+
+
+.wrapper-content.dark .cases-table {
+    padding-right: 140px;
+    font-size: 24px;
+}
+
+.wrapper-content.dark .cases-table table tr td:nth-child(odd) {
+    opacity: 0.7;
+}

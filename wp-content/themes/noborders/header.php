@@ -11,11 +11,11 @@
 <?php wp_body_open(); ?>
 
 <?php
-    global $wp_query;
-    $category = get_the_category($wp_query->get_queried_object_id());
+    $id = get_queried_object_id() ? get_queried_object_id() : get_the_ID();
+    $background = get_post_meta($id, 'background', true);
 ?>
 
-    <div class="wrapper-content <?php echo $category[0]->name?>">
+    <div class="wrapper-content <?php echo (is_front_page()) ? "main-page" : ""; ?><?php if($background) {echo $background;}?>">
 
         <header>
             <div class="logo"></div>
@@ -66,6 +66,9 @@
 
         </header>
         <div class="background-x">
+            <div class="vector-x"></div>
+        </div>
+        <div class="background-x-left">
             <div class="vector-x"></div>
         </div>
         <div class="container">

@@ -1,0 +1,41 @@
+.wrapper-content .container .career-posts .items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+}
+
+.wrapper-content .container .career-posts .items .item:nth-child(odd) {
+    background: #FFF;
+}
+
+.wrapper-content .container .career-posts .items .item:nth-child(odd) a {
+    color: #343635;
+}
+
+.wrapper-content .container .career-posts .items .item:nth-child(even) {
+    background: #343635;
+    color: #fff;
+}
+
+.wrapper-content .container .career-posts .items .item:nth-child(even) a {
+    color: #fff;
+}
+
+.wrapper-content .container .career-posts .items .item {
+    width: 440px;
+    height: 398px;
+    margin: 20px 20px 0 0;
+    padding: 40px;
+    font-size: 68px;
+    font-weight: bolder;
+    position: relative;
+}
+
+.wrapper-content .container .career-posts .items .item a {
+    display: block;
+    padding-top: 48px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 40px;
+    text-decoration: none;
+}

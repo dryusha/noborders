@@ -1,0 +1,26 @@
+#footer {
+    color: #343635;
+    background: #fff;
+    padding: 160px 0 200px 200px;
+    position: relative;
+    z-index: 20;
+
+}
+
+#footer .title {
+    font-size: 68px;
+    font-weight: bolder;
+}
+
+#footer .title span {
+    font-size: 80px;
+    padding-top: 18px;
+    display: block;
+    text-decoration: underline;
+}
+
+#footer .description {
+    font-size: 20px;
+    padding-top: 190px;
+    white-space: pre;
+}
