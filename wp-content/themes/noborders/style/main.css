@@ -5,7 +5,6 @@
 }
 
 .wrapper-content.main-page .container h2 {
-    font-size: 68px;
     font-weight: bolder;
     margin-top: 208px;
 }
@@ -39,7 +38,6 @@
 }
 
 .wrapper-content.main-page .container .packages .title h3 {
-    font-size: 68px;
     margin: 0;
 }
 
@@ -143,7 +141,6 @@
 }
 
 .wrapper-content.main-page .container .why .title h4 {
-    font-size: 68px;
     margin: 0;
 }
 
@@ -255,14 +252,20 @@
     left: -230px;
     padding: 92px 30px 0 0;
     min-height: 1000px;
+    overflow: hidden;
 }
 
 .wrapper-content.main-page .container .cases .title {
     font-size: 309px;
     font-weight: bolder;
+    padding: 0;
 }
 
-.wrapper-content.main-page .container .cases .items{
+.wrapper-content.main-page .container .cases .items.mobile {
+    display: none;
+}
+
+.wrapper-content.main-page .container .cases .items.desktop{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -357,11 +360,11 @@
     /*height: 506px;*/
 /*}*/
 
-.wrapper-content.main-page .container .cases .items .block {
+.wrapper-content.main-page .container .cases .items.desktop .block {
     width: 28%;
 }
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(2) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(2) {
     width: 41%;
     display: flex;
     flex-wrap: wrap;
@@ -369,21 +372,21 @@
     margin-top: 160px;
 }
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(1) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(1) {
     margin-top: 70px;
 }
 
-.wrapper-content.main-page .container .cases .items .block .item {
+.wrapper-content.main-page .container .cases .items.desktop .block .item {
     margin: 0 0 20px 0;
 }
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(3) .item:nth-last-child(2) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(3) .item:nth-last-child(2) {
     width: 333px;
     height: 333px;
     float: right;
 }
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(3) .item:nth-last-child(1) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(3) .item:nth-last-child(1) {
     width: 460px;
     height: 460px;
     float: right;
@@ -392,34 +395,34 @@
 
 
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(2) .item:nth-last-child(3) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(2) .item:nth-last-child(3) {
     width: 100%;
     height: 420px;
 }
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(2) .item:nth-last-child(2) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(2) .item:nth-last-child(2) {
     width: 214px;
     height: 214px;
 }
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(2) .item:nth-last-child(1) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(2) .item:nth-last-child(1) {
     width: 50%;
     flex-grow: 1;
     text-align: center;
 }
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(1) .item:nth-last-child(2) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(1) .item:nth-last-child(2) {
     width: 214px;
     height: 214px;
 }
 
-.wrapper-content.main-page .container .cases .items .block:nth-last-child(1) .item:nth-last-child(1) {
+.wrapper-content.main-page .container .cases .items.desktop .block:nth-last-child(1) .item:nth-last-child(1) {
     width: 430px;
     height: 506px;
 }
 
 
-.wrapper-content.main-page .container .cases .items .block .item a {
+.wrapper-content.main-page .container .cases .items.desktop .block .item a {
     width: 100%;
     height: 100%;
     display: block;
@@ -445,7 +448,6 @@
 }
 
 .wrapper-content.main-page .container .what .title h5 {
-    font-size: 68px;
     margin: 0;
 }
 
@@ -458,4 +460,176 @@
     font-size: 20px;
     list-style-image: url("/noborders/wp-content/themes/noborders/images/icon-bullet-x.svg");
     margin-top: 10px;
+}
+
+
+@media screen and (max-width: 1520px) {
+    .wrapper-content.main-page .container .cases .title {
+        font-size: 260px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .wrapper-content.main-page .container .cases .title {
+        font-size: 200px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .wrapper-content.main-page .container .cases .title {
+        font-size: 180px;
+    }
+
+    .wrapper-content.main-page .container h1 {
+        font-size: 60px;
+        line-height: 76px;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .wrapper-content.main-page .container h1 {
+        font-size: 50px;
+        line-height: 66px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper-content.main-page .container {
+        padding-bottom: 80px;
+    }
+
+    .wrapper-content.main-page .container .packages .options,
+    .wrapper-content.main-page .container .packages .title,
+    .wrapper-content.main-page .container .packages ul,
+    .wrapper-content.main-page .container p {
+        padding-right: 16px;
+    }
+
+    .wrapper-content.main-page .container h1 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .wrapper-content.main-page .container h2 {
+        margin-top: 132px;
+    }
+
+    .wrapper-content.main-page .container .packages {
+        padding: 37px 0 0 16px;
+        left: -16px;
+        margin-top: 77px;
+    }
+
+    .wrapper-content.main-page .container .why .title,
+    .wrapper-content.main-page .container .packages .title {
+        display: block;
+    }
+
+    .wrapper-content.main-page .container .why .title a.discover,
+    .wrapper-content.main-page .container .packages .title a.discover {
+        display: block;
+        text-align: right;
+        margin-top: 24px;
+    }
+
+    .wrapper-content.main-page .container .what ul li,
+    .wrapper-content.main-page .container .packages ul li {
+        font-size: 18px;
+    }
+
+    .wrapper-content.main-page .container .packages .options {
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+
+    .wrapper-content.main-page .container .packages .options .block {
+        width: 160px;
+        padding: 44px 0 0 0;
+    }
+
+    .wrapper-content.main-page .container .packages .options .block .title {
+        font-size: 20px;
+        padding-bottom: 16px;
+    }
+
+    .wrapper-content.main-page .container .why .options .block .text,
+    .wrapper-content.main-page .container .packages .options .block .text {
+        font-size: 16px;
+    }
+
+    .wrapper-content.main-page .container .what,
+    .wrapper-content.main-page .container .why {
+        padding: 80px 0 0 0;
+    }
+
+    .wrapper-content.main-page .container .why .background-x-noborder {
+        display: none;
+    }
+
+    .wrapper-content.main-page .container .why .options .block {
+        padding: 44px 0 0 0;
+    }
+
+    .wrapper-content.main-page .container .why .options .block i.icon-number span {
+        width: 64px;
+        height: 48px;
+        font-size: 32px;
+    }
+
+    .wrapper-content.main-page .container .why .options .block i.icon-number::after {
+        width: 54px;
+        height: 54px;
+    }
+
+
+
+
+    .wrapper-content.main-page .container .cases {
+        width: 100%;
+        left: -16px;
+        padding: 48px 0 0 0;
+        min-height: auto;
+    }
+
+    .wrapper-content.main-page .container .cases .title {
+        font-size: 109px;
+        line-height: 85px;
+    }
+
+    .wrapper-content.main-page .container .cases .items.desktop {
+        display: none;
+    }
+
+    .wrapper-content.main-page .container .cases .items.mobile {
+        width: auto;
+        display: flex;
+        position: unset;
+        padding-left: 16px;
+    }
+
+    .wrapper-content.main-page .container .cases .items.mobile .item {
+        width: 48%;
+        margin: 0 0 16px 0;
+    }
+
+    .wrapper-content.main-page  .cases .items .item:nth-child(3n) {
+        width: 48%;
+    }
+
+    .wrapper-content.main-page .container .cases .items.mobile .item a{
+        display: block;
+        width: 100%;
+        height: 160px;
+    }
+
+    .wrapper-content.main-page .container .cases .items.mobile .item:last-child,
+    .wrapper-content.main-page .container .cases .items.mobile .item:last-child a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrapper-content.main-page .container .cases .items.mobile .item:last-child {
+        text-align: right;
+        margin-top: 20px;
+    }
 }

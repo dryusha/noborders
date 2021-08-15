@@ -155,7 +155,21 @@ function portfolioPosts($atts) {
             ];
         }
 
-        $content .= "<div class='items'>";
+        $content .= "<div class='items mobile'>";
+
+        foreach ($atts_ids as $key=>$value) {
+            $content .= "<div class='item'>
+                <a href=\"".$value->link."\" style=\"
+                    background: url( ".$value->img.");
+                    background-position: center;
+                    background-size: cover;
+                \"></a>
+            </div>";
+        }
+
+        $content .= "<div class='item'><a class='discover' href='cases'><span>Discover more</span> <i class='icon-arrow'></i></a></div>";
+        $content .= "</div>";
+        $content .= "<div class='items desktop'>";
 
         for ($i = 0; $i < 7; $i++) {
 

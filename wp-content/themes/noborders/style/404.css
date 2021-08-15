@@ -1,0 +1,58 @@
+.error404 .wrapper-content .container {
+    overflow: hidden;
+}
+
+.error404 .wrapper-content .container header {
+    padding-left: 0;
+    padding-bottom: 40px;
+}
+
+.error404 .wrapper-content .container header h1 {
+    margin-top: 240px;
+    margin-bottom: 0;
+}
+
+.error404 .wrapper-content .container .background-x-nobordervector{
+    position: absolute;
+    width: 100%;
+    height: 552px;
+    content:"";
+    right: -32px;
+    top: -68px;
+    background: url("/noborders/wp-content/themes/noborders/images/404-vector-x.svg") no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.error404 .wrapper-content .container .page-content a {
+    display: block;
+    width: max-content;
+    margin-bottom: 196px;
+    padding-bottom: 8px;
+    color: #F1D45B;
+    text-decoration: none;
+    border-bottom: 1px solid #F1D45B;
+}
+
+.error404 .wrapper-content .container .page-content .noborder-logo {
+    width: 230px;
+    height: 43px;
+    content:"";
+    background: url("/noborders/wp-content/themes/noborders/images/noborder-dark.svg") no-repeat;
+    background-size: 230px auto;
+}
+
+
+
+
+
+
+@media screen and (max-width: 640px) {
+    .error404 .wrapper-content .container header h1 {
+        margin-top: 110px;
+    }
+
+    .error404 .wrapper-content .container .background-x-nobordervector{
+        height: 292px;
+    }
+}

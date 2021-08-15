@@ -23,7 +23,11 @@
     position: relative;
 }
 
-.wrapper-content header .menu button{
+.wrapper-content header .menu button.mobile {
+    display: none;
+}
+
+.wrapper-content header .menu button.desktop {
     font-size: 20px;
     font-weight: lighter;
     background: transparent;
@@ -33,34 +37,34 @@
     text-transform: uppercase;
 }
 
-.wrapper-content header .menu button:hover {
+.wrapper-content header .menu button.desktop:hover {
     cursor: pointer;
 }
 
-#nav-toggle {
+.nav-toggle {
     position: absolute;
     z-index: 100;
     background: #343635;
     color: #fff;
 }
 
-#nav-toggle .nav-toggle-wrapper{
+.nav-toggle .nav-toggle-wrapper{
     padding: 34px 39px 554px 39px;
 }
 
-#nav-toggle .nav-toggle-wrapper .toggle-header {
+.nav-toggle .nav-toggle-wrapper .toggle-header {
     display: flex;
     justify-content: flex-end;
     font-size: 20px;
     margin-bottom: 130px;
 }
 
-#nav-toggle .nav-toggle-wrapper .toggle-header .title {
+.nav-toggle .nav-toggle-wrapper .toggle-header .title {
     width: 100%;
     text-align: center;
 }
 
-#nav-toggle .nav-toggle-wrapper .toggle-header .title span{
+.nav-toggle .nav-toggle-wrapper .toggle-header .title span{
     font-weight: lighter;
     background: transparent;
     border: 0;
@@ -69,40 +73,121 @@
     text-transform: uppercase;
 }
 
-#nav-toggle .nav-toggle-wrapper .toggle-header .close:hover {
+.nav-toggle .nav-toggle-wrapper .toggle-header .close:hover {
     cursor: pointer;
 }
 
-#nav-toggle .nav-toggle-wrapper .toggle-icon {
+.nav-toggle .nav-toggle-wrapper .toggle-icon {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
 }
 
-#nav-toggle .nav-toggle-wrapper .toggle-icon li {
+.nav-toggle[data-item="quote"] .toggle-icon {
+    display: block;
+    margin-left: 222px;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon .wpforms-container {
+    margin: 0;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container .wpforms-field-label-inline {
+    font-size: 10px;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    width: max-content;
+    padding: 0;
+    margin-bottom: 20px;
+    min-width: 570px;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div.wpforms-has-error {
+    color: red;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div label.wpforms-error {
+    display: none !important;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div:last-child {
+    border: 0;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div label {
+    margin: 0;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div input {
+    color: #fff;
+    background: transparent;
+    border: 0;
+    padding:0 0 0 10px
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon .wpforms-container .wpforms-confirmation-container-full {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container ul li{
+    display: flex;
+    text-align: left;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-submit-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 570px;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-submit-container button {
+    font-size: 23px;
+    background: transparent;
+    color: #fff;
+    border: 0;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-submit-container button:hover {
+    background: transparent;
+    border: 0;
+}
+
+.nav-toggle .nav-toggle-wrapper .toggle-icon .title{
+    font-size: 80px;
+}
+
+.nav-toggle .nav-toggle-wrapper .toggle-icon li {
     width: 50%;
     text-align: center;
     margin-bottom: 38px;
     padding: 0;
+    list-style:none;
 }
 
-#nav-toggle .nav-toggle-wrapper .toggle-icon li a {
+.nav-toggle .nav-toggle-wrapper .toggle-icon li a {
     color: #FFF;
     text-decoration: none;
     padding-bottom: 5px;
     border-bottom: 1px solid #FFF;
 }
 
-#nav-toggle .nav-toggle-wrapper .toggle-icon li a:hover {
+.nav-toggle .nav-toggle-wrapper .toggle-icon li a:hover {
     color: #94D6F1;
     border-bottom: 1px solid #94D6F1;
 }
 
-#nav-toggle.fade.out {
+.nav-toggle.fade.out {
     height: 0;
 }
 
-#nav-toggle.fade{
+.nav-toggle.fade{
     width: 100%;
     height: 0;
     max-height: 9999px;
@@ -123,7 +208,7 @@
     border-radius: 0 0 0 100%;
 }
 
-.wrapper-content header .get-in-touch span{
+.wrapper-content header .get-in-touch span {
     color: #fff;
     width: 54px;
     font-size: 16px;
@@ -131,4 +216,119 @@
     text-align: center;
     float: right;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 640px) {
+    .nav-toggle .nav-toggle-wrapper {
+        padding-right: 16px;
+    }
+
+    .nav-toggle[data-item="quote"] .nav-toggle-wrapper {
+        padding-left: 24px;
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-header {
+        margin-bottom: 32px;
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-header .title {
+        font-size: 16px;
+        text-align: left;
+        padding-top: 8px;
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-header .title span {
+        border-bottom: 0;
+        line-height: 0;
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-header .close.mobile {
+        display: block;
+        width: 40px;
+        height: 32px;
+        background: #F1D45B;
+        border: 0;
+        border-radius: 50%;
+        padding-top: 5px;
+        text-align: center;
+        color: #343635;
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-header .close.mobile:before {
+        content: "X";
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-icon {
+        display: block;
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-icon li {
+        width: 100%;
+        text-align: left;
+        font-size: 32px;
+    }
+
+    .nav-toggle[data-item="quote"] .toggle-icon {
+        margin: 0;
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-icon .title {
+        font-size: 40px;
+        margin-bottom: 32px;
+        display: block;
+    }
+
+    .nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div {
+        margin-bottom: 32px;
+        width: auto;
+        min-width: 100%;
+    }
+
+    .nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div label {
+        display: flex;
+    }
+
+    .nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div input {
+        width: 100%;
+    }
+
+    .nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div ul li input {
+        width: auto;
+    }
+
+    .wrapper-content header {
+        padding-left: 16px;
+    }
+
+    .nav-toggle .nav-toggle-wrapper .toggle-header .close.desktop,
+    .wrapper-content header .menu button.desktop,
+    .wrapper-content header .get-in-touch {
+        display: none;
+    }
+
+    .wrapper-content header .menu button.mobile {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: #343635;
+        border: 0;
+        border-radius: 50%;
+        margin-right: 16px;
+        padding-left: 13px;
+    }
+
+    .wrapper-content header .menu button.mobile span:first-child {
+        margin-bottom: 6px;
+    }
+
+    .wrapper-content header .menu button.mobile span {
+        width: 14px;
+        height: 2px;
+        display: block;
+        background: #fff;
+    }
+
+
 }
