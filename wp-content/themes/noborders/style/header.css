@@ -229,11 +229,16 @@
         padding-left: 24px;
     }
 
+    .nav-toggle[data-item="menu"] .nav-toggle-wrapper .toggle-header {
+        justify-content: space-between;
+    }
+
     .nav-toggle .nav-toggle-wrapper .toggle-header {
         margin-bottom: 32px;
     }
 
     .nav-toggle .nav-toggle-wrapper .toggle-header .title {
+        width: auto;
         font-size: 16px;
         text-align: left;
         padding-top: 8px;

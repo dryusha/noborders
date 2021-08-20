@@ -39,3 +39,18 @@
     bottom: 40px;
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 640px) {
+    .wrapper-content .container .career-posts .items {
+        width: auto;
+    }
+
+    .wrapper-content .container .career-posts .items .item {
+        width: 100%;
+        height: 100%;
+        min-height: 184px;
+        padding: 24px;
+        font-size: 32px;
+    }
+}

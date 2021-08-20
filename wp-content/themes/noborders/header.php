@@ -23,7 +23,7 @@
 
         <?php if(!is_404()) { ?>
             <header>
-                <div class="logo"></div>
+                <a href="<?php echo home_url(); ?>" class="logo"></a>
 
                 <?php
                     if ( has_nav_menu( 'expanded' ) ) {

@@ -3,6 +3,7 @@
 @import "main.css";
 @import "cases.css";
 @import "career.css";
+@import "contacts.css";
 @import "404.css";
 @import "dark.css";
 @import "blue.css";
@@ -76,6 +77,10 @@ h5 {
 p {
     padding-right: 140px;
     margin: 0 0 48px 0;
+}
+
+a {
+    color: #343635;
 }
 
 img {
@@ -178,6 +183,88 @@ li {
     display: none;
 }
 
+.wrapper-content .container .wp-block-columns {
+    margin-bottom: 1.3em;
+}
+
+.wrapper-content .container .wp-block-columns .wp-block-column:nth-child(2) {
+    flex-grow: 1.5;
+}
+
+.wrapper-content .container .wp-block-columns .wp-block-column p {
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+.wrapper-content .container .wp-block-columns .wp-block-column a {
+    font-size: 44px;
+}
+
+
+
+.wrapper-content .container .wp-block-table table {
+    font-size: 20px;
+    border-collapse: collapse;
+}
+
+.wrapper-content .container .wp-block-table table tbody td.table-title {
+    font-size: 32px;
+}
+
+.wrapper-content .container .wp-block-table.noborders-content table tbody tr {
+    border-bottom: 1px solid #fff;
+}
+
+.wrapper-content .container .wp-block-table.noborders-content table.table1 tbody tr:first-child {
+    border-bottom: 3px solid #fff;
+}
+
+.wrapper-content .container .wp-block-table.noborders-content table.table1 tbody tr:nth-child(4) td:nth-child(3),
+.wrapper-content .container .wp-block-table.noborders-content table.table3 tbody tr td:nth-child(5),
+.wrapper-content .container .wp-block-table.noborders-content table.table1 tbody tr td:nth-child(5) {
+    color:#F1D45B;
+}
+
+.wrapper-content .container .wp-block-table.noborders-content table.table3 tbody tr:nth-child(2) {
+    font-weight: bolder;
+    border-top: 3px solid #fff;
+    border-bottom: 0;
+    text-align: center;
+}
+
+.wrapper-content .container .wp-block-table.noborders-content table.table3 tbody tr:nth-child(2) td:nth-child(1) {
+    text-align: left;
+}
+
+.wrapper-content .container .wp-block-table.noborders-content table tbody tr td {
+    padding: 10px 40px 10px 0;
+    vertical-align: top;
+}
+
+.wrapper-content .container .wp-block-table.noborders-content table tbody tr td:first-child {
+    width:224px;
+    padding: 10px 0;
+}
+
+.price-list-p-title {
+    color:#F1D45B;
+}
+
+.price-list-p-description,
+.price-list-p-text {
+    font-size: 20px;
+}
+
+.price-list-p-description {
+    opacity: 0.6;
+}
+
+.price-list-p-add {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
 
 @media screen and (max-width: 1010px) {
     body {
@@ -190,7 +277,7 @@ li {
     }
 
     .wrapper-content .container {
-        padding: 0 0 146px 64px;
+        padding: 0 0 126px 64px;
     }
 
     .wrapper-content .container .sp-ea-single .ea-header a {
@@ -209,7 +296,7 @@ li {
     }
 
     .wrapper-content .container {
-        padding: 0 0 146px 32px;
+        padding: 0 0 100px 32px;
     }
 
     .wrapper-content .container .sp-ea-single .ea-header a {
@@ -230,6 +317,7 @@ li {
     h1 {
         font-size: 40px;
         line-height: 52px;
+        margin-bottom: 16px;
     }
 
     h2,
@@ -237,6 +325,7 @@ li {
     h4,
     h5 {
         font-size: 32px;
+        margin-top: 56px;
         margin-bottom: 16px;
     }
 
@@ -244,12 +333,41 @@ li {
         font-size: 18px;
     }
 
+    strong {
+        font-size: 32px;
+    }
+
+    .medium {
+        font-size: 18px;
+    }
+
+    .padding-right {
+        padding-right: 16px;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    .wrapper-content .noborders-content {
+        width: auto;
+        left: 0;
+        padding-right: 16px;
+    }
+
     .wrapper-content .container {
-        padding: 0 0 146px 16px;
+        padding: 0 0 80px 16px;
     }
 
     .wrapper-content .container .title {
+        display: block;
         padding: 0 16px 32px 0;
+    }
+
+    .wrapper-content .container .title a.discover {
+        display: block;
+        text-align: right;
+        margin-top: 24px;
     }
 
     .wrapper-content .background-x {
@@ -281,5 +399,9 @@ li {
 
     .wrapper-content .container .wp-block-columns .wp-block-column p {
         margin-bottom: 0;
+    }
+
+    .wrapper-content .container .wp-block-columns .wp-block-column a {
+        font-size: 34px;
     }
 }

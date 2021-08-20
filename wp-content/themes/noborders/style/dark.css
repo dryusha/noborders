@@ -44,3 +44,19 @@
 .dark  li {
     list-style-image: url("/noborders/wp-content/themes/noborders/images/dash-dark.svg");
 }
+
+@media screen and (max-width: 640px) {
+    .wrapper-content.dark header .menu button {
+        background: #F1D45B;
+    }
+
+    .wrapper-content.dark header .menu button.mobile span {
+        background: #343635;
+    }
+
+    .wrapper-content.dark .container a.discover {
+        display: block;
+        padding: 20px 0 36px 0;
+        float: none;
+    }
+}
