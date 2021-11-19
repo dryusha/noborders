@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 640px) {
     #footer {
-        padding: 80px 20px 278px 20px;
+        padding: 80px 20px 100px 20px;
     }
 
     #footer .title {
@@ -36,7 +36,7 @@
     }
 
     #footer .title span {
-        font-size: 38px;
+        font-size: 32px;
         padding-top: 16px;
     }
 

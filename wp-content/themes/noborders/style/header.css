@@ -15,7 +15,7 @@
     width: 230px;
     height: 43px;
     content:"";
-    background: url("/noborders/wp-content/themes/noborders/images/noborder.svg") no-repeat;
+    background: url("/wp-content/themes/noborders/images/noborder.svg") no-repeat;
     background-size: 230px auto;
 }
 
@@ -118,6 +118,17 @@
     border: 0;
 }
 
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div:last-child .wpforms-field-label-inline {
+    padding-left: 50px;
+}
+
 .nav-toggle[data-item="quote"] .toggle-icon form .wpforms-field-container div label {
     margin: 0;
 }
@@ -152,12 +163,23 @@
     background: transparent;
     color: #fff;
     border: 0;
+    padding: 0;
 }
 
 .nav-toggle[data-item="quote"] .toggle-icon form .wpforms-submit-container button:hover {
     background: transparent;
     border: 0;
 }
+
+.nav-toggle[data-item="quote"] .toggle-icon form .wpforms-submit-container button:after {
+    width: 46px;
+    height: 18px;
+    display: inline-block;
+    content:"";
+    background: url("/wp-content/themes/noborders/images/arrow-send.svg") no-repeat;
+    margin-left: 20px;
+}
+
 
 .nav-toggle .nav-toggle-wrapper .toggle-icon .title{
     font-size: 80px;

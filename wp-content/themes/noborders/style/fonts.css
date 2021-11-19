@@ -1,4 +1,19 @@
 @font-face {
     font-family: EuclidCircularA;
-    src: url(fonts/EuclidCircularA-Light.otf);
+    src: url(fonts/EuclidCircularA-Light-WebS.oet);
+    src: local('☺'),
+        url('fonts/EuclidCircularA-Light-WebS.woff') format('woff'),
+        url('fonts/EuclidCircularA-Light-WebS.ttf') format('truetype'),
+        url('fonts/EuclidCircularA-Light-WebS.svg#webfontg8dbVmxj') format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: EuclidCircularA;
+    src: url(fonts/EuclidCircularA-Bold-WebS.oet);
+    src: local('☺'),
+        url('fonts/EuclidCircularA-Bold-WebS.woff') format('woff'),
+        url('fonts/EuclidCircularA-Bold-WebS.ttf') format('truetype'),
+        url('fonts/EuclidCircularA-Bold-WebS.svg#webfontg8dbVmxj') format('svg');
+    font-weight: bold;
 }

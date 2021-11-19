@@ -4,7 +4,7 @@
 }
 
 .wrapper-content.dark header .logo {
-    background: url("/noborders/wp-content/themes/noborders/images/noborder-dark.svg") no-repeat;
+    background: url("/wp-content/themes/noborders/images/noborder-dark.svg") no-repeat;
 }
 
 .wrapper-content.dark header .menu button {
@@ -19,9 +19,12 @@
     color: #343635;
 }
 
-.wrapper-content.dark .background-x-left,
 .wrapper-content.dark .background-x {
     display: none;
+}
+
+.wrapper-content.dark .background-x-left {
+    background: url("/wp-content/themes/noborders/images/vector-x1-dark.svg") no-repeat;
 }
 
 .wrapper-content.dark .container a.show-all {
@@ -38,11 +41,11 @@
 }
 
 .wrapper-content.dark .container a.discover i.icon-arrow {
-    background: url("/noborders/wp-content/themes/noborders/images/arrow-dark.svg") no-repeat;
+    background: url("/wp-content/themes/noborders/images/arrow-dark.svg") no-repeat;
 }
 
 .dark  li {
-    list-style-image: url("/noborders/wp-content/themes/noborders/images/dash-dark.svg");
+    list-style-image: url("/wp-content/themes/noborders/images/dash-dark.svg");
 }
 
 @media screen and (max-width: 640px) {
@@ -52,6 +55,10 @@
 
     .wrapper-content.dark header .menu button.mobile span {
         background: #343635;
+    }
+
+    .wrapper-content.dark .background-x-left {
+        display: none;
     }
 
     .wrapper-content.dark .container a.discover {

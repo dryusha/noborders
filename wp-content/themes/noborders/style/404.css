@@ -19,7 +19,7 @@
     content:"";
     right: -32px;
     top: -68px;
-    background: url("/noborders/wp-content/themes/noborders/images/404-vector-x.svg") no-repeat;
+    background: url("/wp-content/themes/noborders/images/404-vector-x.svg") no-repeat;
     background-size: contain;
     background-position: right;
 }
@@ -38,7 +38,7 @@
     width: 230px;
     height: 43px;
     content:"";
-    background: url("/noborders/wp-content/themes/noborders/images/noborder-dark.svg") no-repeat;
+    background: url("/wp-content/themes/noborders/images/noborder-dark.svg") no-repeat;
     background-size: 230px auto;
 }
 

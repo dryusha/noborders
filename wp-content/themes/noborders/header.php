@@ -29,7 +29,7 @@
                     if ( has_nav_menu( 'expanded' ) ) {
                 ?>
                     <div class="menu toggle-wrapper has-expanded-menu">
-                        <button class="js_menu_btn desktop" data-item="menu">Meet your digital team</button>
+                        <button class="js_menu_btn desktop" data-item="menu">Your Digital Team</button>
                         <button class="js_menu_btn mobile" data-item="menu">
                             <span></span>
                             <span></span>
@@ -40,7 +40,7 @@
                                 <span class="toggle-inner">
                                     <div class="toggle-header">
                                         <div class="title">
-                                            <span>Meet your digital team</span>
+                                            <span>Your Digital Team</span>
                                         </div>
                                         <div class="js_menu_btn close desktop" data-item="menu">Close</div>
                                         <div class="js_menu_btn close mobile" data-item="menu"></div>
@@ -57,7 +57,7 @@
                                         );?>
                                         <li>
                                             <a href="javascript:void()" class="js_menu_btn" data-item="quote">
-                                                Get Quote
+                                                Get In Touch
                                             </a>
                                         </li>
 
@@ -82,7 +82,7 @@
                                     </div>
 
                                     <div class="toggle-icon">
-                                        <span class="title">Get Quote</span>
+                                        <span class="title">Get In Touch</span>
                                         <?php echo do_shortcode('[wpforms id="113" title="false"]'); ?>
                                     </div>
                                 </span>

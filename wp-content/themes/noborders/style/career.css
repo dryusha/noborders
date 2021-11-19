@@ -1,7 +1,7 @@
 .wrapper-content .container .career-posts .items {
     display: flex;
     flex-wrap: wrap;
-    width: 1100px;
+    max-width: 1100px;
 }
 
 .wrapper-content .container .career-posts .items .item:nth-child(odd) {

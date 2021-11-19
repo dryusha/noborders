@@ -1,0 +1,67 @@
+.wrapper-content .container .price-list-p-title {
+    color:#F1D45B;
+}
+
+.wrapper-content .container .price-list-p-description,
+.wrapper-content .container .price-list-p-text {
+    font-size: 20px;
+}
+
+.wrapper-content .container .price-list-p-text {
+    flex-grow: 2;
+    max-width: 569px
+}
+
+.wrapper-content .container .price-list-p-description {
+    opacity: 0.6;
+}
+
+.wrapper-content .container .price-list-p-add {
+    flex: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.wrapper-content .container .wp-block-columns.package {
+    flex-wrap: wrap;
+}
+
+.wrapper-content .container .wp-block-columns.package .wp-block-column:nth-child(2) {
+    flex-grow: 1.5;
+}
+
+
+@media screen and (max-width: 640px) {
+    .mobile.table .block .table-price,
+    .mobile.table .block .table-text,
+    .wrapper-content .container .price-list-p-add,
+    .wrapper-content .container .price-list-p-description,
+    .wrapper-content .container .price-list-p-text {
+        font-size: 16px;
+    }
+
+    .mobile.table .block {
+        border-bottom: 1px solid;
+        padding-bottom: 16px;
+        margin-bottom: 56px;
+    }
+
+    .mobile.table .block:last-child {
+        border-bottom: 0;
+    }
+
+    .mobile.table .block .table-title {
+        font-size: 36px;
+        padding-bottom: 16px;
+        font-weight: 700;
+    }
+
+    .mobile.table .block .table-text {
+        padding-bottom: 16px;
+    }
+
+    .mobile.table .block .table-price {
+        font-weight: 600;
+    }
+}

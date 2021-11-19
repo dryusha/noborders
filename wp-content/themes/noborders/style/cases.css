@@ -21,22 +21,28 @@
     width: 100%;
 }
 
+.wrapper-content .cases-block h3 {
+    margin-top: 120px;
+    font-size: 32px;
+}
+
+.wrapper-content .cases-block .discover {
+    padding-top: 120px !important;
+}
+
 .wrapper-content .cases-block .items .item .title,
 .wrapper-content .cases .items .item .title {
     display: block;
     font-size: 32px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .wrapper-content .cases-block .items .item .title span,
 .wrapper-content .cases .items .item .title span{
     display: block;
     font-size: 20px;
-}
-
-
-.wrapper-content .cases-block h3 {
-    margin-top: 0;
+    font-weight: normal;
 }
 
 .wrapper-content .cases-block .items {
